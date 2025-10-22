@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:background="#52D95B"
+        android:gravity="center"
+        android:text="Calculator"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:id="@+id/btnAdd"
+        android:layout_marginTop="30dp"
+        android:text="Addition"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:id="@+id/btnSub"
+        android:layout_marginTop="10dp"
+        android:text="Subtraction"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:onClick="openSub"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:id="@+id/btnMul"
+        android:layout_marginTop="10dp"
+        android:text="Multiplication"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:onClick="openMul"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:id="@+id/btnDiv"
+        android:layout_marginTop="10dp"
+        android:text="Division"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:onClick="openDiv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="HardcodedText" />
+
+    <EditText
+        android:id="@+id/txtUsername"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:hint="Enter the UserName"
+        android:importantForAutofill="no"
+        android:minHeight="48dp"
+        android:textColorHint="#546E7A"
+        tools:ignore="HardcodedText,TextFields,VisualLintTextFieldSize" />
+
+    <EditText
+        android:id="@+id/txtPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:hint="Enter the Password"
+        android:importantForAutofill="no"
+        android:minHeight="48dp"
+        android:textColorHint="#546E7A"
+        tools:ignore="HardcodedText,TextFields,VisualLintTextFieldSize" />
+
+    <Button
+        android:id="@+id/btnSubmit"
+        android:onClick="submit"
+        android:text="Submit"
+        android:textSize="30sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="HardcodedText" />
+
+</LinearLayout>

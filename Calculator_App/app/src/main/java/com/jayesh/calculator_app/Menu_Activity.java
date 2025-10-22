@@ -1,0 +1,54 @@
+package com.jayesh.calculator_app;
+
+import android.annotation.SuppressLint;
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
+
+public class Menu_Activity extends AppCompatActivity {
+    @Override
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.menu_layout);
+
+        Button btnAdd = findViewById(R.id.btnAdd);
+        btnAdd.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(Menu_Activity.this,Addition_Activity.class);
+                startActivity(i);
+            }
+        });
+
+    }
+    public void openSub(View view){
+        Intent i = new Intent(Menu_Activity.this,Subtraction_Activity.class);
+        startActivity(i);
+    }
+    public void openMul(View v){
+        Intent i = new Intent(Menu_Activity.this,Multiplication_Activity.class);
+        startActivity(i);
+    }
+
+    public void openDiv(View view){
+        Intent i = new Intent(Menu_Activity.this, Division_Activity.class);
+        startActivity(i);
+    }
+    public void submit(View view){
+        EditText txtUsername = findViewById(R.id.txtUsername);
+        EditText txtPassword = findViewById(R.id.txtPassword);
+
+        Intent i = new Intent(Menu_Activity.this, Info_Activity.class);
+
+        i.putExtra("USERNAME",txtUsername.getText().toString());
+        i.putExtra("PASSWORD",txtPassword.getText().toString());
+
+        startActivity(i);
+
+    }
+}
